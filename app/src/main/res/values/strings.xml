@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">ScoreKeeperApp</string>
+    <string name="roger">Roger</string>
+    <string name="federer">Federer</string>
+    <string name="challenges">Challenges</string>
+    <string name="sets">Sets</string>
+    <string name="_0">0</string>
+    <string name="games">Games</string>
+    <string name="dominic">Dominic</string>
+    <string name="thiem">Thiem</string>
+    <string name="eye">eye</string>
+    <string name="reset">reset</string>
 </resources>

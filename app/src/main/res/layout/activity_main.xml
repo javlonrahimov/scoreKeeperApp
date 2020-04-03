@@ -7,12 +7,12 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:paddingTop="30dp"
         android:id="@+id/container_player1"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/wrap_constraint"
         android:layout_height="match_parent"
-        android:background="#EF5350"
+        android:background="@color/colorPrimary"
         android:orientation="vertical"
+        android:paddingTop="@dimen/topPaddingFromStatusbar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/container_player2"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="8dp"
+            android:padding="@dimen/padding8"
             android:weightSum="3">
 
             <LinearLayout
@@ -36,77 +36,86 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
-                    android:text="Roger"
+                    android:text="@string/roger"
                     android:textColor="@android:color/white"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/text_size_name" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
-                    android:text="Federer"
+                    android:text="@string/federer"
                     android:textColor="@android:color/white"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/text_size_name" />
             </LinearLayout>
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="94dp"
-                android:layout_height="94dp"
+                android:layout_width="@dimen/civ_size"
+                android:layout_height="@dimen/civ_size"
                 android:layout_gravity="end"
                 android:layout_weight="1"
                 android:src="@drawable/roger"
                 app:civ_border_color="@android:color/white"
-                app:civ_border_width="2dp" />
+                app:civ_border_width="@dimen/civ_border_width" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="12dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_margin="@dimen/divider_margin"
             android:background="@android:color/white"
             android:orientation="horizontal" />
+
         <TextView
-            android:textColor="@android:color/white"
-            android:layout_gravity="center"
-            android:textSize="26sp"
-            android:text="Challenges"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/challenges"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/challenges_text_size" />
+
         <LinearLayout
-            android:weightSum="3"
-            android:layout_margin="12dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/divider_margin"
+            android:weightSum="3">
+
             <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="?selectableItemBackgroundBorderless"
                 android:src="@drawable/ic_remove_red_eye_white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:contentDescription="@string/eye" />
+
             <ImageButton
+                android:contentDescription="@string/eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="?selectableItemBackgroundBorderless"
-                android:src="@drawable/ic_remove_red_eye_white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:src="@drawable/ic_remove_red_eye_white" />
+
             <ImageButton
+                android:contentDescription="@string/eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="?selectableItemBackgroundBorderless"
-                android:src="@drawable/ic_remove_red_eye_white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:src="@drawable/ic_remove_red_eye_white" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="12dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_margin="@dimen/divider_margin"
             android:background="@android:color/white"
             android:orientation="horizontal" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="12dp"
+            android:layout_margin="@dimen/divider_margin"
             android:orientation="horizontal"
             android:weightSum="3">
 
@@ -114,52 +123,52 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="Sets"
+                android:text="@string/sets"
                 android:textColor="@android:color/white"
-                android:textSize="26sp"
+                android:textSize="@dimen/challenges_text_size"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="0"
+                android:text="@string/_0"
                 android:textAlignment="textEnd"
                 android:textColor="@android:color/white"
-                android:textSize="26sp"
+                android:textSize="@dimen/challenges_text_size"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="12dp"
+            android:layout_margin="@dimen/divider_margin"
             android:weightSum="3">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="Games"
+                android:text="@string/games"
                 android:textColor="@android:color/white"
-                android:textSize="26sp"
+                android:textSize="@dimen/challenges_text_size"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="0"
+                android:text="@string/_0"
                 android:textAlignment="textEnd"
                 android:textColor="@android:color/white"
-                android:textSize="26sp"
+                android:textSize="@dimen/challenges_text_size"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="12dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_margin="@dimen/divider_margin"
             android:background="@android:color/white"
             android:orientation="horizontal" />
 
@@ -167,26 +176,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="0"
+            android:text="@string/_0"
             android:textColor="@android:color/white"
-            android:textSize="76sp"
+            android:textSize="@dimen/score_text_size"
             android:textStyle="bold" />
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="12dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_margin="@dimen/divider_margin"
             android:background="@android:color/white"
             android:orientation="horizontal" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:paddingTop="30dp"
         android:id="@+id/container_player2"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/wrap_constraint"
         android:layout_height="match_parent"
         android:background="@android:color/white"
         android:orientation="vertical"
+        android:paddingTop="@dimen/topPaddingFromStatusbar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/container_player1"
@@ -196,90 +206,100 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="8dp"
+            android:padding="@dimen/padding8"
             android:weightSum="3">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="94dp"
-                android:layout_height="94dp"
+                android:layout_width="@dimen/civ_size"
+                android:layout_height="@dimen/civ_size"
                 android:layout_gravity="start"
                 android:src="@drawable/thiem"
-                app:civ_border_color="#EF5350"
-                app:civ_border_width="2dp" />
+                app:civ_border_color="@color/colorPrimary"
+                app:civ_border_width="@dimen/civ_border_width" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="2"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="InefficientWeight">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
-                    android:text="Dominic"
-                    android:textColor="#EF5350"
-                    android:textSize="20sp" />
+                    android:text="@string/dominic"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_name" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
-                    android:text="Thiem"
-                    android:textColor="#EF5350"
-                    android:textSize="20sp" />
+                    android:text="@string/thiem"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_name" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="12dp"
-            android:background="#EF5350"
+            android:layout_height="@dimen/divider_height"
+            android:layout_margin="@dimen/divider_margin"
+            android:background="@color/colorPrimary"
             android:orientation="horizontal" />
+
         <TextView
-            android:textColor="@color/colorPrimary"
-            android:layout_gravity="center"
-            android:textSize="26sp"
-            android:text="Challenges"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/challenges"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/challenges_text_size" />
+
         <LinearLayout
-            android:weightSum="3"
-            android:layout_margin="12dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/divider_margin"
+            android:weightSum="3">
+
             <ImageButton
+                android:contentDescription="@string/eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="?selectableItemBackgroundBorderless"
-                android:src="@drawable/ic_remove_red_eyecolor_primary"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:src="@drawable/ic_remove_red_eyecolor_primary" />
+
             <ImageButton
+                android:contentDescription="@string/eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="?selectableItemBackgroundBorderless"
-                android:src="@drawable/ic_remove_red_eyecolor_primary"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:src="@drawable/ic_remove_red_eyecolor_primary" />
+
             <ImageButton
+                android:contentDescription="@string/eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="?selectableItemBackgroundBorderless"
-                android:src="@drawable/ic_remove_red_eyecolor_primary"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:src="@drawable/ic_remove_red_eyecolor_primary" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="12dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_margin="@dimen/divider_margin"
             android:background="@color/colorPrimary"
             android:orientation="horizontal" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="12dp"
+            android:layout_margin="@dimen/divider_margin"
             android:orientation="horizontal"
             android:weightSum="3">
 
@@ -287,20 +307,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="0"
+                android:text="@string/_0"
                 android:textAlignment="textStart"
                 android:textColor="@color/colorPrimary"
-                android:textSize="26sp"
+                android:textSize="@dimen/challenges_text_size"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="Sets"
+                android:text="@string/sets"
                 android:textAlignment="textEnd"
                 android:textColor="@color/colorPrimary"
-                android:textSize="26sp"
+                android:textSize="@dimen/challenges_text_size"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -308,34 +328,34 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="12dp"
+            android:layout_margin="@dimen/divider_margin"
             android:weightSum="3">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="0"
+                android:text="@string/_0"
                 android:textAlignment="textStart"
                 android:textColor="@color/colorPrimary"
-                android:textSize="26sp"
+                android:textSize="@dimen/challenges_text_size"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="Games"
+                android:text="@string/games"
                 android:textAlignment="textEnd"
                 android:textColor="@color/colorPrimary"
-                android:textSize="26sp"
+                android:textSize="@dimen/challenges_text_size"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="12dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_margin="@dimen/divider_margin"
             android:background="@color/colorPrimary"
             android:orientation="horizontal" />
 
@@ -343,14 +363,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="0"
+            android:text="@string/_0"
             android:textColor="@color/colorPrimary"
-            android:textSize="76sp"
+            android:textSize="@dimen/score_text_size"
             android:textStyle="bold" />
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="12dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_margin="@dimen/divider_margin"
             android:background="@color/colorPrimary"
             android:orientation="horizontal" />
 
@@ -359,15 +380,16 @@
 
     <ImageButton
         android:id="@+id/reset_button"
-        android:layout_width="82dp"
-        android:layout_height="82dp"
-        android:layout_margin="16dp"
+        android:layout_width="@dimen/reset_button_size"
+        android:layout_height="@dimen/reset_button_size"
+        android:layout_margin="@dimen/margin16"
         android:background="@drawable/background_reset_button"
-        android:elevation="4dp"
+        android:elevation="@dimen/elevation_reset_button"
         android:src="@drawable/ic_settings_backup_restore_black_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/reset" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"

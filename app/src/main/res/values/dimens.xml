@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="topPaddingFromStatusbar">30dp</dimen>
+    <dimen name="wrap_constraint">0dp</dimen>
+    <dimen name="padding8">8dp</dimen>
+    <dimen name="text_size_name">20sp</dimen>
+    <dimen name="civ_size">94dp</dimen>
+    <dimen name="civ_border_width">2dp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+    <dimen name="divider_margin">12dp</dimen>
+    <dimen name="challenges_text_size">26sp</dimen>
+    <dimen name="score_text_size">76sp</dimen>
+    <dimen name="reset_button_size">82dp</dimen>
+    <dimen name="margin16">16dp</dimen>
+    <dimen name="elevation_reset_button">4dp</dimen>
+</resources>
