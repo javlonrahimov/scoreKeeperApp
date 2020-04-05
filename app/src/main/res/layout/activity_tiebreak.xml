@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".models.TiebreakActivity">
+
+    <LinearLayout
+        android:id="@+id/container_player1_tiebreak"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/container_player2_tiebreak"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/civ_size_tiebreak"
+            android:layout_margin="@dimen/divider_margin"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/roger"
+            app:civ_border_color="@color/colorPrimary"
+            app:civ_border_width="@dimen/civ_border_width" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/divider_margin"
+            android:text="@string/tieb"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/challenges_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:padding="@dimen/padding8"
+            android:id="@+id/scoresPlayer1Tiebreak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin16"
+            android:layout_weight="1"
+            android:text="@string/_0"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/score_tiebreak_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container_player2_tiebreak"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/container_player1_tiebreak"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/civ_size_tiebreak"
+            android:layout_margin="@dimen/divider_margin"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/thiem"
+            app:civ_border_color="@android:color/white"
+            app:civ_border_width="@dimen/civ_border_width" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/divider_margin"
+            android:text="@string/reak"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/challenges_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:padding="@dimen/padding8"
+            android:id="@+id/scoresPlayer2Tiebreak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin16"
+            android:layout_weight="1"
+            android:text="@string/_0"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/score_tiebreak_size" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/divider_margin"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="onTiebreakButton1CLicked"
+        android:src="@drawable/ic_add_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/divider_margin"
+        android:backgroundTint="@android:color/white"
+        android:onClick="onTiebreakButton2CLicked"
+        android:src="@drawable/ic_add_color_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

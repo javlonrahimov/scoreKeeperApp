@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="topPaddingFromStatusbar">30dp</dimen>
+    <dimen name="topPaddingFromStatusbar">34dp</dimen>
     <dimen name="wrap_constraint">0dp</dimen>
     <dimen name="padding8">8dp</dimen>
     <dimen name="text_size_name">20sp</dimen>
@@ -13,4 +13,6 @@
     <dimen name="reset_button_size">82dp</dimen>
     <dimen name="margin16">16dp</dimen>
     <dimen name="elevation_reset_button">4dp</dimen>
+    <dimen name="score_tiebreak_size">106sp</dimen>
+    <dimen name="civ_size_tiebreak">250dp</dimen>
 </resources>
